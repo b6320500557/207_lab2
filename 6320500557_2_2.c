@@ -1,16 +1,25 @@
 #include <stdio.h>
 int main()
 {
-    int pro;
-    int min;
-    float total;
+    char pro;
+    float total=0,min,sum=0;
     scanf("%c",&pro);
-    scanf("%d",&min);
+    scanf("%f",&min);
 
     if(pro == 'A')
     {
-        total = min % 200;
-        printf("%.2f",total);
+        sum = min - 200;
+        sum = sum*3;
+        total = (int)sum + 199;
+        printf("%.2f",total+1);
+    }
+    else
+    {
+        sum = min - 400;
+        sum =sum*2;
+        total = (int)sum + 299 ;
+        printf("%.2f",total+1);
     }
 
+    return 0;
 }
